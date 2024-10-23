@@ -11,7 +11,7 @@ export default function Home() {
 
   const today = new Date();
 
-  const limitData = today.setDate(today.getDate() - 10); // pega a data atual e subtrai 10 dias
+  const limitData = today.setDate(today.getDate() - 10); 
 
   const recentItems = items.filter(
     (item) => item.createdAt >= limitData && item.createdAt <= today

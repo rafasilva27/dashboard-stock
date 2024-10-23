@@ -15,7 +15,7 @@ export default function DeleteButton({ itemId, itemName }) {
   const handleDelete = () => {
     if (confirm(`Tem certeza que deseja excluir o item ${itemName}?`)) {
       deleteItem(itemId);
-      navigate("/items"); // redireciona para a tela de itens após a exclusão
+      navigate("/items"); 
     }
   };
 

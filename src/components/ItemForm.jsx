@@ -25,7 +25,7 @@ export default function ItemForm({ itemToUpdate}) {
 
   const handleChange = (event) => {
     setItem(currentState => {
-        return {...currentState, [event.target.name]: event.target.value} // cria uma cópia do estado atual e atualiza o valor da propriedade name com o valor do input
+        return {...currentState, [event.target.name]: event.target.value} 
     })
   }
 
@@ -38,11 +38,11 @@ export default function ItemForm({ itemToUpdate}) {
         alert("Item atualizado com sucesso!")
         navigate("/items")
       } else {
-        const validItem = new StockItem(item) // passando o item que ta no estado atual para o construtor da classe StockItem
+        const validItem = new StockItem(item) 
         addItem(validItem) 
-        setItem(defaultItem) // limpa o form setando os valores default
+        setItem(defaultItem) 
         alert("Item adicionado com sucesso!")
-        inputRef.current.focus() // para focar no primeiro campo do form, após o item ser adicionado
+        inputRef.current.focus() 
       }
     } catch (error) {
       console.log(error.message)

@@ -5,10 +5,10 @@ export default class StockItem {
     this.id = Math.floor(Math.random() * 100000); // gera um ID aleatório
     this.name = name;
     this.description = description;
-    this.quantity = Number(quantity); // converte a string em número
+    this.quantity = Number(quantity); 
     this.price = Number(price);
     this.category = category;
-    this.createdAt = new Date(); // data atual da criação
+    this.createdAt = new Date(); 
     this.updatedAt = new Date();
 
     this.#validate();

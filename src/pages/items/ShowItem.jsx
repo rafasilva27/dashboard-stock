@@ -5,9 +5,9 @@ import DeleteButton from "../../components/DeleteButton";
 
 export default function ShowItem() {
   const { getItem } = useContext(StockContext)
-  const { id } = useParams() // pega o id da URL
+  const { id } = useParams() 
 
-  const item = getItem(id) // chama a função getItem passando o id como parâmetro
+  const item = getItem(id)
 
   return (
     <div className="item">
@@ -23,7 +23,7 @@ export default function ShowItem() {
       </div>
       <p>{item.description}</p>
       <div className="row">
-        <p style={{ fontSize: "1rem", color: "gray" }}>Criado em: {item.createdAt.toLocaleDateString()}</p> {/* toDateString transforma a data em string */}
+        <p style={{ fontSize: "1rem", color: "gray" }}>Criado em: {item.createdAt.toLocaleDateString()}</p> 
         <p style={{ fontSize: "1rem", color: "gray" }}>Atualizado em: {item.updatedAt.toLocaleDateString()}</p>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 
 export default function ItemsLayout() {
-  const { pathname } = useLocation(); // retorna o objeto do local atual, com as informações da url
+  const { pathname } = useLocation(); 
 
   return (
     <main>
@@ -9,7 +9,7 @@ export default function ItemsLayout() {
       <div className="tabs">
         <Link
           to="/items"
-          className={`tab ${pathname === "/items" ? "active" : ""}`} // se pathname for igual a /items, adicionar a classe active
+          className={`tab ${pathname === "/items" ? "active" : ""}`} 
         >
           Todos os itens
         </Link>
